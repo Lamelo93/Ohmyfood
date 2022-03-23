@@ -9,3 +9,14 @@
 @import "./Layout/footer";
 @import "./Pages/Homepage";
 @import "./Pages/Menus";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

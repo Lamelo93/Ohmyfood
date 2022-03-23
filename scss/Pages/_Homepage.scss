@@ -1,0 +1,20 @@
+.location{
+    @include center-content;
+    height: $location-box-height;
+    background-color: lightgray;
+    color: lighten($color: $text-color, $amount: 25%);
+    &__town{
+        @include typography($secondary-font-family, 15px, 800)
+    }
+    &__icon{
+        padding-right: 50px;
+    }
+}
+.heading{
+    text-align: center;
+}
+.restau{
+    &__image{
+        width: 200px;
+    }
+}

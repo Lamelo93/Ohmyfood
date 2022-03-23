@@ -1,0 +1,9 @@
+.header{
+    @include center-content;
+    height: $header-height;
+    &__logo{
+        &--logofont{
+            @include typography;
+        }
+    }
+}
