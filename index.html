@@ -8,27 +8,28 @@
     <title>Ohmyfood</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <!--fontawesome icons-->
     <script src="https://kit.fontawesome.com/6063b990ed.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container home">
         <header class="header">
             <h1 class="header__logo header__logo--logofont">ohmyfood</h1>
         </header>
+        <main class="main">
         <div class="location">
             <i class="fas fa-map-marker-alt location__icon"></i>
             <span class="location__town">Paris, Belleville</span>
         </div>
         <div class="heading">
-            <h2 class="heading__title">Réservez le menu qui vous convient</h2>
-            <p class="heading__p">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-            <button class="heading__button"><a class="heading__button-link" href="#restaurants">Explorer nos restaurants</a></button>
+            <h2 class="heading__title home__title">Réservez le menu qui vous convient</h2>
+            <p class="heading__p">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <button class="heading__button btn"><a class="heading__button-link btn__link" href="#restaurants">Explorer nos restaurants</a></button>
         </div>
         <div class="guide">
-            <h2 class="guide__title">Fonctionnement</h2>
+            <h2 class="guide__title home__title">Fonctionnement</h2>
             <ol class="guide__list">
                 <li class="guide__list-item">
                     <div class="guide__list-dot">1</div>
@@ -48,7 +49,7 @@
             </ol>
         </div>
         <section id="restaurants" class="restau-section">
-            <h2 class="restau-section__title">Restaurants</h2>
+            <h2 class="restau-section__title home__title">Restaurants</h2>
             <div class="restau">
                 <div class="restau-card">
                     <a href="#" class="restau__link">
@@ -101,6 +102,7 @@
                 </a>
             </div>
         </section>
+    </main>
         <footer class="footer">
             <img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood_logo" class="footer__logo">
             <ul class="footer__list">

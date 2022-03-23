@@ -4,8 +4,16 @@
     font-weight:$font-weight;
 }
 
-@mixin center-content{
+@mixin center-content ($gap:0, $direction:row) {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+@mixin home-title-style {
+    font-size: $home-title-size;
+    font-weight: $home-title-weight;
+    
 }

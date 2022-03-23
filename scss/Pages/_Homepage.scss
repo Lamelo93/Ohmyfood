@@ -1,17 +1,46 @@
+.home{
+    &__title{
+        @include home-title-style;
+    }
+}
+
 .location{
     @include center-content;
     height: $location-box-height;
-    background-color: lightgray;
-    color: lighten($color: $text-color, $amount: 25%);
+    background-color: $bg-color-a;
+    color: lighten($color: $text-color, $amount: 27%);
+    box-shadow: inset 1px 3px 4px 0px rgba(0,0,0,0.28);
     &__town{
-        @include typography($secondary-font-family, 15px, 800)
+        font-size: $secondary-font-size;
+        font-weight: $secondary-font-weight;
     }
     &__icon{
-        padding-right: 50px;
+        font-size: $icon-font-size;
+        position: relative;
+        top: -4px;
+        left: -25px;
     }
 }
 .heading{
+    @include center-content(25px,column);
+    padding: 40px 30px;
     text-align: center;
+    background-color: $bg-color-b;
+    &__title{
+        padding: 0 20px;
+    }
+    &__p{
+        color: lighten($color: $text-color, $amount: 50%);
+        font-size: $heading-text-size;
+        font-weight: 400;
+    }
+}
+.guide{
+    padding: 40px 20px;
+    font-size: $secondary-font-size;
+    &__list-item{
+        display: flex;
+    }
 }
 .restau{
     &__image{

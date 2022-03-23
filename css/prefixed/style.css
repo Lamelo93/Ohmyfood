@@ -1,2 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.btn {
+  color: white;
+  background: gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  width: 220px;
+  height: 45px;
+  border-radius: 50px;
+  font-size: 15px;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  height: 60px;
+}
+.header__logo--logofont {
+  font-family: Shrikhand, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 768px;
+}
+
+.main {
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  height: 50px;
+  background-color: #eaeaea;
+  color: #454545;
+  -webkit-box-shadow: inset 1px 3px 4px 0px rgba(0, 0, 0, 0.28);
+          box-shadow: inset 1px 3px 4px 0px rgba(0, 0, 0, 0.28);
+}
+.location__town {
+  font-size: 15px;
+  font-weight: 600;
+}
+.location__icon {
+  font-size: 17px;
+  position: relative;
+  top: -4px;
+  left: -25px;
+}
+
+.heading {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.heading__title {
+  font-size: 25px;
+  font-weight: 800;
+}
+.heading__p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.restau__image {
+  width: 200px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Njc3MvQmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vLi4vc2Nzcy9Db21wb25lbnRzL19idXR0b25zLnNjc3MiLCIuLi8uLi9zY3NzL1V0aWxzL192YXJpYWJsZXMuc2NzcyIsIi4uL3N0eWxlLmNzcyIsIi4uLy4uL3Njc3MvTGF5b3V0L19oZWFkZXIuc2NzcyIsIi4uLy4uL3Njc3MvVXRpbHMvX21peGlucy5zY3NzIiwiLi4vLi4vc2Nzcy9MYXlvdXQvX2NvbnRhaW5lci5zY3NzIiwiLi4vLi4vc2Nzcy9QYWdlcy9fSG9tZXBhZ2Uuc2NzcyIsIi4uLy4uL3Njc3MvbWFpbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFRLHlIQUFBO0FDQVI7RUFDSSxZQUFBO0VBQ0EsK0VBQUE7RUFDQSxZQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsZUNXYztBQ1RsQjs7QUNSQTtFQ09JLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7TUFBQSxxQkFBQTtVQUFBLHVCQUFBO0VBQ0EseUJBQUE7TUFBQSxzQkFBQTtVQUFBLG1CQUFBO0VBQ0EsTUFKd0I7RURKeEIsWUZvQlc7QUNOZjtBQ1pRO0VDSEosa0NIUWtCO0VHUGxCLGVIVWdCO0VHVGhCLG1CQUg2RjtBRnFCakc7O0FHckJBO0VBQ0ksZ0JBQUE7QUh3Qko7O0FJekJBO0VGQ0ksK0JIU29CO0VHUnBCLGVIVWdCO0VHVGhCLG1CQUg2RjtBRitCakc7O0FJM0JBO0VGR0ksb0JBQUE7RUFBQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx3QkFBQTtNQUFBLHFCQUFBO1VBQUEsdUJBQUE7RUFDQSx5QkFBQTtNQUFBLHNCQUFBO1VBQUEsbUJBQUE7RUFDQSxNQUp3QjtFRUF4QixZTGlCaUI7RUtoQmpCLHlCTEhRO0VLSVIsY0FBQTtFQUNBLDZEQUFBO1VBQUEscURBQUE7QUppQ0o7QUloQ0k7RUFDSSxlTEVhO0VLRGIsZ0JMUWU7QUMwQnZCO0FJaENJO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFdBQUE7QUprQ1I7O0FJL0JBO0VBQ0ksa0JBQUE7RUFDQSx5QkxsQlE7QUNvRFo7QUlqQ0k7RUFDSSxlTFRTO0VLVVQsZ0JMUFc7QUMwQ25CO0FJakNJO0VBQ0ksZUxmVztFS2dCWCxnQkFBQTtBSm1DUjs7QUkvQkk7RUFDSSxZQUFBO0FKa0NSOztBS3pEQTtFQUNJLDhCQUFBO1VBQUEsc0JBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTtBTDRESjs7QUt6REE7RUFDSSxxQkFBQTtFQUNBLGNBQUE7QUw0REoiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
