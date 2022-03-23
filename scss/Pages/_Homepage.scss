@@ -36,11 +36,48 @@
     }
 }
 .guide{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     padding: 40px 20px;
     font-size: $secondary-font-size;
+    &__list{
+        @include center-content(20px,column);
+      }
     &__list-item{
         display: flex;
+        align-items:center;
+        gap: 10px;
+        background-color: $bg-color-b;
+        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+        height: 65px;
+        width: 100%;
+        border-radius: 10px;
+        font-weight: 600;
     }
+    &__list-dot{
+        font-size: 15px;
+        font-weight: normal;
+        position:relative;
+        left:-10px;
+        background:$clr-primary;
+        color: white;
+        border-radius:50%;
+        width:20px;
+        height:20px;
+        line-height: 20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      &__list-icon{
+          padding-right: 10px;
+          color:lighten($color: $text-color, $amount: 50%);
+      }
+}
+
+.restau-section{
+    background-color: $bg-color-a;
 }
 .restau{
     &__image{
