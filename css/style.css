@@ -132,10 +132,52 @@ ul {
 
 .restau-section {
   background-color: #eaeaea;
+  padding: 40px 20px;
 }
 
-.restau__image {
-  width: 200px;
+.restau {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.restau-card {
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 16px;
+}
+.restau-card__top {
+  height: 70%;
+  overflow: hidden;
+}
+.restau-card__bottom {
+  height: 30%;
+  padding: 15px;
+}
+.restau-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.restau-card__name {
+  font-weight: 800;
+}
+.restau-card__location {
+  font-weight: 400;
+}
+.restau-card__like {
+  font-size: 30px;
+}
+.restau-card__like--empty {
+  position: relative;
+  right: -87%;
+  bottom: 75%;
+  z-index: 0;
+}
+.restau-card__like--full {
+  z-index: 1;
 }
 
 * {

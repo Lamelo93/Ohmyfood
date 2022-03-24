@@ -32,7 +32,7 @@
     &__p{
         color: lighten($color: $text-color, $amount: 50%);
         font-size: $heading-text-size;
-        font-weight: 400;
+        font-weight: $tertiary-font-weight;
     }
 }
 .guide{
@@ -78,9 +78,48 @@
 
 .restau-section{
     background-color: $bg-color-a;
+    padding: 40px 20px;
 }
 .restau{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.restau-card{
+    height: $card-height;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    font-size: 16px;
+    &__top{
+        height: 70%;
+        overflow: hidden;
+    }
+    &__bottom{
+        height: 30%;
+        padding: 15px;
+    }
     &__image{
-        width: 200px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__name{
+        font-weight: $primary-font-weight;
+    }
+    &__location{
+        font-weight: $tertiary-font-weight;
+    }
+    &__like{
+        font-size: 30px;
+        &--empty{
+            position: relative;
+            right: -87%;
+            bottom: 75%;
+            z-index: 0;
+        }
+        &--full{
+            z-index: 1;
+        }
     }
 }
