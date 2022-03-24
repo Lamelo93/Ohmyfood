@@ -131,6 +131,9 @@ ul {
 }
 
 .restau-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: #eaeaea;
   padding: 40px 20px;
 }
@@ -153,6 +156,8 @@ ul {
   overflow: hidden;
 }
 .restau-card__bottom {
+  display: flex;
+  justify-content: space-between;
   height: 30%;
   padding: 15px;
 }
@@ -167,16 +172,23 @@ ul {
 .restau-card__location {
   font-weight: 400;
 }
-.restau-card__like {
-  font-size: 30px;
+.restau-card__hearts {
+  width: fit-content;
 }
 .restau-card__like--empty {
+  font-size: 28px;
+  -webkit-background-clip: text;
   position: relative;
-  right: -87%;
-  bottom: 75%;
   z-index: 0;
 }
 .restau-card__like--full {
+  font-size: 32px;
+  position: relative;
+  right: 34px;
+  top: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
   z-index: 1;
 }
 
