@@ -17,3 +17,12 @@
     font-weight: $primary-font-weight;
     
 }
+
+@mixin card-settings {
+    height: $card-height;
+    background-color: $card-bg-color;
+    border-radius: $card-radius;
+    overflow: hidden;
+    font-size: $secondary-font-size;
+    position: relative;
+}

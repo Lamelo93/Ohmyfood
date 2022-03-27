@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ohmyfood</title>
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <!--fontawesome icons-->
+     <!--fontawesome icons-->
     <script src="https://kit.fontawesome.com/6063b990ed.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+   
 </head>
 <body>
     <div class="container home">
         <header class="header">
-            <h1 class="header__logo header__logo--logofont">ohmyfood</h1>
+            <h1 class="header__logo header__logo--logofont logofont">ohmyfood</h1>
         </header>
         <main class="main">
         <div class="location">
@@ -41,9 +41,9 @@
                     <i class="fas fa-list-ul guide__list-icon"></i>
                     Composez votre menu
                 </li>
-                <li class="guide__list-item">
+                <li class="guide__list-item guide__list-item--mod">
                     <div class="guide__list-dot">3</div>
-                    <i class="fas fa-store guide__list-icon"></i>
+                    <i class="fas fa-store guide__list-icon guide__list-icon--mod"></i>
                     Dégustez au restaurant
                 </li>
             </ol>
@@ -51,72 +51,83 @@
         <section id="restaurants" class="restau-section">
             <h2 class="restau-section__title home__title">Restaurants</h2>
             <div class="restau">
-                <div class="restau-card">
+                <div class="restau-card restau-card--new">
                     <a href="#" class="restau-card__link">
                         <div class="restau-card__top">
                             <img class="restau-card__image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La_palette_du_gout.png">
-                            <span class="restau-card__new">Nouveau</span>
+                            
                         </div>
+                        </a>
                         <div class="restau-card__bottom">
                             <div>
                             <h3 class="restau-card__name">La palette du goût</h3>
                             <p class="restau-card__location">Ménilmontant</p>
                             </div>
-                            <i class="fas fa-heart restau-card__like restau-card__like--full"></i>                       
-                        </div>
-                    </a>
+                            <button class="restau-card__btn likebtn fa-stack">
+                                <i class="fas fa-heart restau-card__like restau-card__like--full fa-stack-1x"></i>
+                                <i class="far fa-heart restau-card__like restau-card__like--empty"></i>
+                                </button>                    
+                        </div>    
                 </div>
-                <div class="restau-card">
+                <div class="restau-card restau-card--new">
                     <a href="#" class="restau-card__link">
                         <div class="restau-card__top">
                             <img class="restau-card__image" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La_note_enchantée.png">
-                            <span class="restau-card__new">Nouveau</span>
                         </div>
+                        </a>
                         <div class="restau-card__bottom">
                             <div>
                             <h3 class="restau-card__name">La note enchantée</h3>
                             <p class="restau-card__location">Charonne</p>
                             </div>  
-                            <i class="fas fa-heart restau-card__like restau-card__like--full"></i>  
+                            <button class="restau-card__btn likebtn fa-stack">
+                                <i class="fas fa-heart restau-card__like restau-card__like--full fa-stack-1x"></i>
+                                <i class="far fa-heart restau-card__like restau-card__like--empty"></i>
+                                </button>  
                         </div>
-                    </a>
             </div>
-            <div class="restau-card">
-                <a href="#" class="restau-card__link">
-                    <div class="restau-card__top">
-                        <img class="restau-card__image" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À_la_française.png">
-                    </div>
-                    <div class="restau-card__bottom">
-                        <div>
-                        <h3 class="restau-card__name">À la française</h3>
-                        <p class="restau-card__location">Cité Rouge</p>
+                <div class="restau-card">
+                    <a href="#" class="restau-card__link">
+                        <div class="restau-card__top">
+                            <img class="restau-card__image" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À_la_française.png">
                         </div>
-                        <div class="restau-card__hearts">  
-                        <i class="fas fa-heart restau-card__like restau-card__like--full"></i>
+                        </a>
+                        <div class="restau-card__bottom">
+                            <div>
+                            <h3 class="restau-card__name">À la française</h3>
+                            <p class="restau-card__location">Cité Rouge</p>
+                            </div>
+                            <div class="restau-card__hearts">  
+                                <button class="restau-card__btn likebtn fa-stack">
+                                    <i class="fas fa-heart restau-card__like restau-card__like--full fa-stack-1x"></i>
+                                    <i class="far fa-heart restau-card__like restau-card__like--empty"></i>
+                                    </button>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="restau-card">
-                <a href="#" class="restau-card__link">
-                    <div class="restau-card__top">
-                        <img class="restau-card__image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le_délice_des_sens.png">
-                    </div>
-                    <div class="restau-card__bottom">
-                        <div>
-                        <h3 class="restau-card__name">Le délice des sens</h3>
-                        <p class="restau-card__location">Folie-Méricourt</p>
+                </div>
+                <div class="restau-card">
+                    <a href="#" class="restau-card__link">
+                        <div class="restau-card__top">
+                            <img class="restau-card__image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le_délice_des_sens.png">
                         </div>
-                        <div class="restau-card__hearts">                
-                        <i class="fas fa-heart restau-card__like restau-card__like--full"></i>
+                        </a>
+                        <div class="restau-card__bottom">
+                            <div>
+                            <h3 class="restau-card__name">Le délice des sens</h3>
+                            <p class="restau-card__location">Folie-Méricourt</p>
+                            </div>
+                            <div class="restau-card__hearts">                
+                                <button class="restau-card__btn likebtn fa-stack">
+                                    <i class="fas fa-heart restau-card__like restau-card__like--full fa-stack-1x"></i>
+                                    <i class="far fa-heart restau-card__like restau-card__like--empty"></i>
+                                    </button>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                </div>
         </section>
     </main>
         <footer class="footer">
-            <img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood_logo" class="footer__logo">
+            <h1 class="footer__logo footer__logo--logofont logofont">ohmyfood</h1>
             <ul class="footer__list">
                 <li class="footer__list-item">
                     <a href="#">

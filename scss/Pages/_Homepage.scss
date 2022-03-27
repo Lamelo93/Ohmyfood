@@ -52,8 +52,11 @@
         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
         height: 65px;
         width: 100%;
-        border-radius: 10px;
+        border-radius: 20px;
         font-weight: 600;
+        &--mod{
+            background-color: adjust-color($color: $bg-color-b, $saturation: 80%,)
+        }
     }
     &__list-dot{
         font-size: 15px;
@@ -73,6 +76,9 @@
       &__list-icon{
           padding-right: 10px;
           color:lighten($color: $text-color, $amount: 50%);
+          &--mod{
+              color: $clr-primary;
+          }
       }
 }
 
@@ -81,7 +87,7 @@
     flex-direction: column;
     gap: 30px;
     background-color: $bg-color-a;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 .restau{
     display: flex;
@@ -89,11 +95,25 @@
     gap: 20px;
 }
 .restau-card{
-    height: $card-height;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    font-size: 16px;
+    @include card-settings;
+    z-index: 1;
+    &--new{
+        &::after{
+            content: "Nouveau";
+            @include center-content;
+            position: absolute;
+            font-size: 14px;
+            font-weight: 550;
+            top: 10px;
+            right: 10px;
+            color: darken($color: $clr-tertiary, $amount: 38%);
+            background-color: $clr-tertiary;
+            border-radius: 2px;
+            width: 70px;
+            height: 30px;
+            text-align: center;
+        }
+    }
     &__top{
         height: 70%;
         overflow: hidden;
@@ -117,10 +137,17 @@
         font-weight: $tertiary-font-weight;
     }
     &__like{
-        -webkit-background-clip: text;
-        font-weight: 400;
-        font-size: 32px;
-        background-image: black;
-        //background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
+        &--full{
+            opacity:0;
+            transform:scale(0.1);
+            transition: all 300ms ease-out;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
+            &:hover{
+              opacity:1;
+              transform:scale(1.2);
+            }
+        }
     }
 }

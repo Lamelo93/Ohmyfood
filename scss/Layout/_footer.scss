@@ -1,0 +1,17 @@
+.footer{
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+    font-family: $secondary-font-family;
+    &__logo{
+        font-size: $secondary-font-size;
+        padding-bottom: 20px;
+    }
+    &__list-item{
+        padding-bottom: 10px;
+    }
+    &__icon{
+        width: 20px;
+    }
+}
