@@ -49,6 +49,7 @@ ul {
   align-items: center;
   top: 50%;
   width: 100%;
+  max-width: 768px;
 }
 
 .spinner3d {
@@ -163,6 +164,11 @@ ul {
   max-width: 768px;
 }
 
+body {
+  max-width: 768px;
+  overflow: hidden;
+}
+
 .footer {
   background-color: #353535;
   color: white;
@@ -239,6 +245,7 @@ ul {
 }
 
 .guide {
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 25px;
