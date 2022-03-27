@@ -1,5 +1,7 @@
 .btn{
+    cursor: pointer;
     background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
+    background-color: lighten($color: $clr-primary, $amount: 15%);
     color: white;
     width: 220px;
     height: 45px;
@@ -7,6 +9,11 @@
     font-size: $button-font-size;
     border-style: none;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+    transition: all 300ms ease;
+    &:hover{
+        background-blend-mode: hard-light;
+        box-shadow:5px 5px 10px 2px rgba(0,0,0,0.7) ;
+    }
 }
 
 .likebtn{

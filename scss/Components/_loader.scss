@@ -1,0 +1,88 @@
+.spinner{
+    position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+    width: 100%;
+}
+
+
+
+
+.spinner3d{
+    color: white;
+      font-size: 3.5rem;
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      height: $btn-height;
+      perspective: $persp;
+       
+          & > .spinnerflip {
+              animation: spinflip ease 3s infinite both;
+          }
+       
+  }
+  
+  .spinnerflip{
+    @include facet; 
+          transform-style: preserve-3d;
+          transform-origin: center (calc($btn-height/2));
+          transition: transform 500ms cubic-bezier(.7,.01,.23,.99);
+          transform: rotateX(0deg);
+    
+    &__1{
+          transform: rotateX(0deg) translateZ(calc($btn-height/2));
+          @include facet;
+          background: white;
+          color:#9356DC;
+    }
+    
+    &__2{
+      transform: rotateX(90deg) translateZ(calc($btn-height/2));
+              @include facet;
+              background: white;
+      color: #FF79DA;
+    }
+    
+    &__3{
+        transform: rotateX(180deg) translateZ(calc($btn-height/2));
+              @include facet;
+              background: white;
+      color: #99E2D0;
+    }
+  
+  }
+  
+  
+  
+  @keyframes spinflip {
+  
+   0%{
+     
+      transform: rotateX(270deg);
+      transition:ease-in;
+    }
+    
+    20%,40%{
+   
+      transform: rotateX(-90deg);
+    }
+    
+    40%,55%{
+     
+      transform: rotateX(-180deg);
+    } 
+    
+    55%,100%{
+      transform:  rotateX(0deg) ;
+    }
+    
+    
+    90%,100%{
+      transform: perspective(300px) translateZ(10px);
+      transition: ease-in;
+    }
+    
+  }
