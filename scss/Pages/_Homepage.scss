@@ -186,25 +186,42 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        object-position: 0 62%;
     }
     &__name{
         font-weight: $primary-font-weight;
     }
     &__location{
         font-weight: $tertiary-font-weight;
-    }
-    &__like{
+    }   
+    &__hearts{
+        width: 40px;
+        height: 100%;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablet-only{
+            width: 60px;
+            font-size: 60px;
+        }
+        &:hover > .restau-card__hearts--full{
+            opacity:1;
+            transform:scale(1.2);
+        }
+        &--empty{
+            position: absolute;
+            z-index: 1;
+        }
         &--full{
-            opacity:0;
-            transform:scale(0.2);
-            transition: all 300ms ease-out;
+            opacity: 0;
+            transform: scale(0);
+            z-index: 2;
+            position: absolute;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
-            &:hover, &:active{
-              opacity:1;
-              transform:scale(1.2);
-            }
+            transition: all 500ms ease-out;
         }
     }
 }

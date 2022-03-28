@@ -47,14 +47,6 @@ ul {
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7);
 }
 
-.likebtn {
-  width: 32px;
-  font-size: 32px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .spinner {
   position: fixed;
   display: flex;
@@ -495,6 +487,7 @@ ul {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0 62%;
 }
 .restau-card__name {
   font-weight: 800;
@@ -502,17 +495,37 @@ ul {
 .restau-card__location {
   font-weight: 400;
 }
-.restau-card__like--full {
+.restau-card__hearts {
+  width: 40px;
+  height: 100%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 769px) {
+  .restau-card__hearts {
+    width: 60px;
+    font-size: 60px;
+  }
+}
+.restau-card__hearts:hover > .restau-card__hearts--full {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.restau-card__hearts--empty {
+  position: absolute;
+  z-index: 1;
+}
+.restau-card__hearts--full {
   opacity: 0;
-  transform: scale(0.2);
-  transition: all 300ms ease-out;
+  transform: scale(0);
+  z-index: 2;
+  position: absolute;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
-}
-.restau-card__like--full:hover, .restau-card__like--full:active {
-  opacity: 1;
-  transform: scale(1.2);
+  transition: all 500ms ease-out;
 }
 
 * {
