@@ -1,6 +1,12 @@
 .main{
     @include typography($secondary-font-family);
+    @include desktop-only{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
+
+
 
 ul{
     list-style-type: none;

@@ -1,7 +1,6 @@
 .container{
-    max-width: 768px;
-}
-
-body{
-    max-width: 768px;
+    @include desktop-only{
+        max-width: 1440px;
+        margin: auto;
+    }
 }

@@ -1,9 +1,15 @@
 .header{
     @include center-content;
     height: $header-height;
+    @include tablet-only{
+        height: $header-height*2;
+    }
     &__logo{
         &--logofont{
             @include typography;
+            @include tablet-only{
+                font-size: 60px;
+            }
         }
     }
 }

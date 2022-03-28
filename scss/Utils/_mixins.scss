@@ -15,6 +15,9 @@
 @mixin home-title-style {
     font-size: $home-title-size;
     font-weight: $primary-font-weight;
+    @include tablet-only{
+        font-size: 40px;
+    }
     
 }
 
@@ -25,6 +28,13 @@
     overflow: hidden;
     font-size: $secondary-font-size;
     position: relative;
+    @include tablet-only{
+        height: $card-height*2;
+        font-size: $big-text;
+    }
+    @include desktop-only{
+        width: 49%;
+    }
 }
 
 @mixin facet {
@@ -38,4 +48,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin tablet-only {
+    @media screen and (min-width:map-get($breakpoints,tablet)){
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width:map-get($breakpoints,desktop)){
+        @content;
+    }
 }

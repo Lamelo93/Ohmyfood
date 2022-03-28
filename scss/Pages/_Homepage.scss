@@ -22,15 +22,27 @@
     background-color: $bg-color-a;
     color: lighten($color: $text-color, $amount: 27%);
     box-shadow: inset 1px 3px 4px 0px rgba(0,0,0,0.28);
+    @include tablet-only{
+        height: $location-box-height*2;
+    }
+    @include desktop-only{
+        width: 100%;
+    }
     &__town{
         font-size: $secondary-font-size;
         font-weight: $secondary-font-weight;
+        @include tablet-only{
+            font-size: $big-text;
+        }
     }
     &__icon{
         font-size: $icon-font-size;
         position: relative;
         top: -4px;
         left: -25px;
+        @include tablet-only{
+            font-size: $big-text;
+        }
     }
 }
 .heading{
@@ -38,6 +50,9 @@
     padding: 40px 30px;
     text-align: center;
     background-color: $bg-color-b;
+    @include desktop-only{
+        width: 50%;
+    }
     &__title{
         padding: 0 20px;
     }
@@ -45,6 +60,9 @@
         color: lighten($color: $text-color, $amount: 50%);
         font-size: $heading-text-size;
         font-weight: $tertiary-font-weight;
+        @include tablet-only{
+            font-size: $big-text;
+        }
     }
 }
 .guide{
@@ -54,6 +72,12 @@
     gap: 25px;
     padding: 40px 20px;
     font-size: $secondary-font-size;
+    @include tablet-only{
+        padding: 40px 40px;
+    }
+    @include desktop-only{
+        width: 50%;
+    }
     &__list{
         @include center-content(20px,column);
       }
@@ -67,6 +91,10 @@
         width: 100%;
         border-radius: 20px;
         font-weight: 600;
+        @include tablet-only{
+            height: 90px;
+            font-size: $big-text;
+        }
         &--mod{
             background-color: adjust-color($color: $bg-color-b, $saturation: 80%,)
         }
@@ -85,12 +113,17 @@
         display:flex;
         justify-content:center;
         align-items:center;
+        @include tablet-only{
+            width:30px;
+            height:30px;
+            font-size: $big-text;
+        }
       }
       &__list-icon{
           padding-right: 10px;
           color:lighten($color: $text-color, $amount: 50%);
           &--mod{
-              color: $clr-primary;
+            color: $clr-primary;
           }
       }
 }
@@ -101,11 +134,17 @@
     gap: 30px;
     background-color: $bg-color-a;
     padding: 60px 20px;
+    @include desktop-only{
+        width: 100%;
+    }
 }
 .restau{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include desktop-only{
+        flex-flow: row wrap;
+    }
 }
 .restau-card{
     @include card-settings;
@@ -125,6 +164,11 @@
             width: 70px;
             height: 30px;
             text-align: center;
+            @include tablet-only{
+            width: 140px;
+            height: 60px;
+            font-size: $big-text;
+            }
         }
     }
     &__top{
