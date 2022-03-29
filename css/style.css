@@ -47,6 +47,47 @@ ul {
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.7);
 }
 
+.likes {
+  width: 40px;
+  height: 100%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 769px) {
+  .likes {
+    width: 60px;
+    font-size: 60px;
+  }
+}
+.likes:hover > .likes--full {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.likes--empty {
+  position: absolute;
+  z-index: 1;
+}
+.likes--full {
+  opacity: 0;
+  transform: scale(0);
+  z-index: 2;
+  position: absolute;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  transition: all 500ms ease-out;
+}
+
+@keyframes checkflip {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 .spinner {
   position: fixed;
   display: flex;
@@ -156,6 +197,7 @@ ul {
   }
 }
 .header {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +219,12 @@ ul {
   .header__logo--logofont {
     font-size: 60px;
   }
+}
+.header__icon {
+  font-size: 20px;
+  position: absolute;
+  top: 35%;
+  left: 10%;
 }
 
 @media screen and (min-width: 1039px) {
@@ -526,6 +574,145 @@ ul {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(170deg, #FF79DA, #9356DC);
   transition: all 500ms ease-out;
+}
+
+.menu {
+  position: relative;
+  font-family: Roboto, sans-serif;
+}
+.menu__button {
+  align-self: center;
+  margin: 20px 0;
+}
+
+.menu-image {
+  position: relative;
+  overflow: hidden;
+}
+.menu-image__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.menu-container {
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  background-color: #eaeaea;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 15px;
+  margin-top: -45px;
+}
+.menu-container__block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu-container__type {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.menu-container--underlined {
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu-container__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.menu-container__list-item {
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-container__list-item:hover > .menu-container__checkbox {
+  width: 70px;
+}
+.menu-container__list-item:hover .menu-container__icon {
+  animation: checkflip 300ms;
+}
+.menu-container__list-item:hover .menu-container__food-recipe {
+  width: 230px;
+  max-width: 230px;
+}
+.menu-container__list-item:hover .menu-container__food-name {
+  max-width: 230px;
+}
+.menu-container__food {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu-container__food-info {
+  min-width: 0;
+  flex-shrink: 1;
+}
+.menu-container__food-name {
+  font-size: 18px;
+  line-height: 30px;
+  min-width: 0;
+  max-width: 280px;
+  direction: ltr;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 300ms ease-out;
+}
+.menu-container__food-recipe {
+  min-width: 0;
+  max-width: 280px;
+  width: 280px;
+  font-size: 15px;
+  font-weight: 300;
+  direction: ltr;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 300ms ease-out;
+}
+.menu-container__food-price {
+  align-self: flex-end;
+  display: flex;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+.menu-container__checkbox {
+  color: white;
+  font-size: 20px;
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #99E2D0;
+  overflow: hidden;
+  width: 0px;
+  height: 70px;
+  transition: ease 500ms;
+}
+
+.menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.menu-heading__title {
+  font-family: Shrikhand, sans-serif;
+  font-size: 27px;
+  font-weight: normal;
 }
 
 * {

@@ -20,3 +20,44 @@
         box-shadow:5px 5px 10px 2px rgba(0,0,0,0.7) ;
     }
 }
+.likes{
+    width: 40px;
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet-only{
+        width: 60px;
+        font-size: 60px;
+    }
+    &:hover > .likes--full{
+        opacity:1;
+        transform:scale(1.2);
+    }
+    &--empty{
+        position: absolute;
+        z-index: 1;
+    }
+    &--full{
+        opacity: 0;
+        transform: scale(0);
+        z-index: 2;
+        position: absolute;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
+        transition: all 500ms ease-out;
+    }
+    
+}
+
+@keyframes checkflip {
+    from{
+        transform: rotate(-360deg);
+    }
+
+    to{
+        transform: rotate(0deg);
+    }
+}
