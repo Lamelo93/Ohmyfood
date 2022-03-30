@@ -32,4 +32,9 @@ $persp: 500px;
 $btn-width: 25vw;
 $btn-height: 7.5vw;
 
+//menu animation
+$num-block:3;
+$appear-dur:650ms;
+$appear-delay: calc($appear-dur/$num-block);
+
 $breakpoints: (tablet:769px, desktop:1039px);

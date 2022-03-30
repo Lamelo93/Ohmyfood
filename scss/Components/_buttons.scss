@@ -31,7 +31,7 @@
         width: 60px;
         font-size: 60px;
     }
-    &:hover > .likes--full{
+    &:hover > .likes--full,&:active > .likes--full{
         opacity:1;
         transform:scale(1.2);
     }
