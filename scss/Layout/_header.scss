@@ -18,5 +18,8 @@
         position: absolute;
         top: 35%;
         left: 10%;
+        @include tablet-only{
+            font-size: 40px;
+        }
     }
 }
