@@ -78,6 +78,7 @@
         align-items: center;
         justify-content: space-between;
         box-shadow:  5px 10px 30px -10px black;
+        overflow: hidden;
         &:hover > .menu-container__checkbox{
             width: 70px;
             @include tablet-only{
