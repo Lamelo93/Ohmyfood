@@ -37,4 +37,4 @@ $num-block:3;
 $appear-dur:650ms;
 $appear-delay: calc($appear-dur/$num-block);
 
-$breakpoints: (tablet:769px, desktop:1039px);
+$breakpoints: (tablet:769px, desktop:1039px, smallscreen:360px);

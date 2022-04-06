@@ -96,7 +96,7 @@
             font-size: $big-text;
         }
         &--mod{
-            background-color: adjust-color($color: $bg-color-b, $saturation: 80%,)
+            background-color: rgb(245, 237, 255)
         }
     }
     &__list-dot{

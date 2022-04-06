@@ -79,7 +79,7 @@ ul {
   position: absolute;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-image: linear-gradient(20deg, #FF79DA, #9356DC);
   transition: all 400ms ease-out;
 }
 
@@ -446,7 +446,7 @@ ul {
   }
 }
 .guide__list-item--mod {
-  background-color: #fdefef;
+  background-color: #f5edff;
 }
 .guide__list-dot {
   font-size: 15px;
@@ -715,8 +715,18 @@ ul {
   width: 230px;
   max-width: 230px;
 }
+@media screen and (max-width: 360px) {
+  .menu-container__list-item:hover .menu-container__food-recipe {
+    max-width: 90px;
+  }
+}
 .menu-container__list-item:hover .menu-container__food-name {
   max-width: 230px;
+}
+@media screen and (max-width: 360px) {
+  .menu-container__list-item:hover .menu-container__food-name {
+    max-width: 90px;
+  }
 }
 .menu-container__food {
   width: 100%;
@@ -748,6 +758,11 @@ ul {
     min-width: fit-content;
   }
 }
+@media screen and (max-width: 360px) {
+  .menu-container__food-name {
+    max-width: 168px;
+  }
+}
 .menu-container__food-recipe {
   min-width: 0;
   max-width: 280px;
@@ -766,6 +781,11 @@ ul {
     max-width: 100%;
     width: 100%;
     min-width: fit-content;
+  }
+}
+@media screen and (max-width: 360px) {
+  .menu-container__food-recipe {
+    max-width: 168px;
   }
 }
 .menu-container__food-price {

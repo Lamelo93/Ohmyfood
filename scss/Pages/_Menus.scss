@@ -91,10 +91,15 @@
         &:hover .menu-container__food-recipe{
             width: 230px;
             max-width: 230px;
+            @include smallscreen{
+                max-width:90px;
+            }
         }
         &:hover .menu-container__food-name{
-           
             max-width: 230px;
+            @include smallscreen{
+                max-width:90px;
+            }
         }
     }
     &__food{
@@ -125,6 +130,9 @@
             width: 100%;
             min-width:fit-content;
         }
+        @include smallscreen{
+            max-width:168px;
+        }
     }
     &__food-recipe{
         min-width:0;
@@ -142,6 +150,9 @@
             max-width: 100%;
             width: 100%;
             min-width:fit-content;
+        }
+        @include smallscreen{
+            max-width:168px;
         }
     }
     &__food-price{
