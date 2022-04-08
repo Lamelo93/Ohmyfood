@@ -1,25 +1,26 @@
-.header{
-    position: relative;
-    @include center-content;
-    height: $header-height;
-    @include tablet-only{
-        height: $header-height*2;
+//HEADER STYLE
+.header {
+  position: relative;
+  @include center-content;
+  height: $header-height;
+  @include tablet-only {
+    height: $header-height * 2;
+  }
+  &__logo {
+    &--logofont {
+      @include typography;
+      @include tablet-only {
+        font-size: 60px;
+      }
     }
-    &__logo{
-        &--logofont{
-            @include typography;
-            @include tablet-only{
-                font-size: 60px;
-            }
-        }
+  }
+  &__icon {
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    @include tablet-only {
+      font-size: 40px;
     }
-    &__icon{
-        font-size: 20px;
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        @include tablet-only{
-            font-size: 40px;
-        }
-    }
+  }
 }

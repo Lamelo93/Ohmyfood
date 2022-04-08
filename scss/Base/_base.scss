@@ -1,14 +1,15 @@
-.main{
-    @include typography($secondary-font-family);
-    @include desktop-only{
-        display: flex;
-        flex-wrap: wrap;
-    }
+//BASE
+
+/*all pages main content*/
+.main {
+  @include typography($secondary-font-family);
+  @include desktop-only {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
-
-
-ul{
-    list-style-type: none;
-    padding: 0;
+ul {
+  list-style-type: none;
+  padding: 0;
 }

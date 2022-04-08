@@ -1,6 +1,7 @@
-.container{
-    @include desktop-only{
-        max-width: 1440px;
-        margin: auto;
-    }
+//ALL PAGES CONTAINER STYLE
+.container {
+  @include desktop-only {
+    max-width: 1440px;
+    margin: auto;
+  }
 }

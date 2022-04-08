@@ -1,40 +1,50 @@
-$clr-primary:#9356DC;
-$clr-secondary:#FF79DA;
-$clr-tertiary:#99E2D0;
+//VARIABLES
 
-$bg-color-a:rgb(234, 234, 234);
-$bg-color-b:rgb(246, 246, 246);
-$card-bg-color:white;
+/*couleurs*/
+$clr-primary: #9356dc;
+$clr-secondary: #ff79da;
+$clr-tertiary: #99e2d0;
 
-$text-color:black;
+$bg-color-a: rgb(234, 234, 234);
+$bg-color-b: rgb(246, 246, 246);
+$card-bg-color: white;
 
+$text-color: black;
+
+/*polices*/
 $primary-font-family: Shrikhand, sans-serif;
 $secondary-font-family: Roboto, sans-serif;
 
 $primary-font-size: 30px;
-$secondary-font-size:16px;
-$heading-text-size:18px;
-$icon-font-size:17px;
-$home-title-size:24px;
-$button-font-size:15px;
-$big-text:25px;
+$secondary-font-size: 16px;
+$heading-text-size: 18px;
+$icon-font-size: 17px;
+$home-title-size: 24px;
+$button-font-size: 15px;
+$big-text: 25px;
 
-$primary-font-weight:800;
-$secondary-font-weight:600;
-$tertiary-font-weight:400;
+$primary-font-weight: 800;
+$secondary-font-weight: 600;
+$tertiary-font-weight: 400;
 
-$header-height:60px;
-$location-box-height:50px;
-$card-height:250px;
-$card-radius:15px;
+/*dimensions*/
+$header-height: 60px;
+$location-box-height: 50px;
+$card-height: 250px;
+$card-radius: 15px;
 
 $persp: 500px;
 $btn-width: 25vw;
 $btn-height: 7.5vw;
 
-//menu animation
-$num-block:3;
-$appear-dur:650ms;
+/*valeurs animation menus*/
+$num-block: 3;
+$appear-dur: 650ms;
 $appear-delay: calc($appear-dur/$num-block);
 
-$breakpoints: (tablet:769px, desktop:1039px, smallscreen:360px);
+/*breakpoints*/
+$breakpoints: (
+  tablet: 769px,
+  desktop: 1039px,
+  smallscreen: 360px,
+);

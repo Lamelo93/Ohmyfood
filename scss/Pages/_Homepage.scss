@@ -1,227 +1,240 @@
-.home{
-    animation: loader-delay 0ms 2000ms both;
-    &__title{
-        @include home-title-style;
-    }
+//STYLE DE LA PAGE ACCUEIL
+
+/*contenu de la page accueil*/
+.home {
+  animation: loader-delay 0ms 2000ms both;
+  &__title {
+    @include home-title-style;
+  }
 }
 
-@keyframes loader-delay{
-    from{
-        opacity: 0;
-        
-    }
-    to{
-        opacity: 1;
-        
-    }
+@keyframes loader-delay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.location{
-    @include center-content;
-    height: $location-box-height;
-    background-color: $bg-color-a;
-    color: lighten($color: $text-color, $amount: 27%);
-    box-shadow: inset 1px 3px 4px 0px rgba(0,0,0,0.28);
-    @include tablet-only{
-        height: $location-box-height*2;
-    }
-    @include desktop-only{
-        width: 100%;
-    }
-    &__town{
-        font-size: $secondary-font-size;
-        font-weight: $secondary-font-weight;
-        @include tablet-only{
-            font-size: $big-text;
-        }
-    }
-    &__icon{
-        font-size: $icon-font-size;
-        position: relative;
-        top: -4px;
-        left: -25px;
-        @include tablet-only{
-            font-size: $big-text;
-        }
-    }
-}
-.heading{
-    @include center-content(25px,column);
-    padding: 40px 30px;
-    text-align: center;
-    background-color: $bg-color-b;
-    @include desktop-only{
-        width: 50%;
-    }
-    &__title{
-        padding: 0 20px;
-    }
-    &__p{
-        color: lighten($color: $text-color, $amount: 50%);
-        font-size: $heading-text-size;
-        font-weight: $tertiary-font-weight;
-        @include tablet-only{
-            font-size: $big-text;
-        }
-    }
-}
-.guide{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 40px 20px;
+/*localisation du restaurant*/
+.location {
+  @include center-content;
+  height: $location-box-height;
+  background-color: $bg-color-a;
+  color: lighten($color: $text-color, $amount: 27%);
+  box-shadow: inset 1px 3px 4px 0px rgba(0, 0, 0, 0.28);
+  @include tablet-only {
+    height: $location-box-height * 2;
+  }
+  @include desktop-only {
+    width: 100%;
+  }
+  &__town {
+    /*nom de la ville*/
     font-size: $secondary-font-size;
-    @include tablet-only{
-        padding: 40px 40px;
+    font-weight: $secondary-font-weight;
+    @include tablet-only {
+      font-size: $big-text;
     }
-    @include desktop-only{
-        width: 50%;
+  }
+  &__icon {
+    font-size: $icon-font-size;
+    position: relative;
+    top: -4px;
+    left: -25px;
+    @include tablet-only {
+      font-size: $big-text;
     }
-    &__list{
-        @include center-content(20px,column);
-      }
-    &__list-item{
-        display: flex;
-        align-items:center;
-        gap: 10px;
-        background-color: $bg-color-b;
-        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-        height: 65px;
-        width: 100%;
-        border-radius: 20px;
-        font-weight: 600;
-        @include tablet-only{
-            height: 90px;
-            font-size: $big-text;
-        }
-        &--mod{
-            background-color: rgb(245, 237, 255)
-        }
+  }
+}
+/*présentation de l'entreprise*/
+.heading {
+  @include center-content(25px, column);
+  padding: 40px 30px;
+  text-align: center;
+  background-color: $bg-color-b;
+  @include desktop-only {
+    width: 50%;
+  }
+  &__title {
+    padding: 0 20px;
+  }
+  &__p {
+    /*paragraphe*/
+    color: lighten($color: $text-color, $amount: 50%);
+    font-size: $heading-text-size;
+    font-weight: $tertiary-font-weight;
+    @include tablet-only {
+      font-size: $big-text;
     }
-    &__list-dot{
-        font-size: 15px;
-        font-weight: normal;
-        position:relative;
-        left:-10px;
-        background:$clr-primary;
-        color: white;
-        border-radius:50%;
-        width:20px;
-        height:20px;
-        line-height: 20px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        @include tablet-only{
-            width:30px;
-            height:30px;
-            font-size: $big-text;
-        }
-      }
-      &__list-icon{
-          padding-right: 10px;
-          color:lighten($color: $text-color, $amount: 50%);
-          &--mod{
-            color: $clr-primary;
-          }
-      }
+  }
 }
 
-.restau-section{
+/*fonctionement du site*/
+.guide {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 20px;
+  font-size: $secondary-font-size;
+  @include tablet-only {
+    padding: 40px 40px;
+  }
+  @include desktop-only {
+    width: 50%;
+  }
+  &__list {
+    @include center-content(20px, column);
+  }
+  &__list-item {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background-color: $bg-color-a;
-    padding: 60px 20px;
-    @include desktop-only{
-        width: 100%;
+    align-items: center;
+    gap: 10px;
+    background-color: $bg-color-b;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    height: 65px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 600;
+    @include tablet-only {
+      height: 90px;
+      font-size: $big-text;
     }
-}
-.restau{
+    &--mod {
+      /*troisieme objet de liste*/
+      background-color: rgb(245, 237, 255);
+    }
+  }
+  &__list-dot {
+    font-size: 15px;
+    font-weight: normal;
+    position: relative;
+    left: -10px;
+    background: $clr-primary;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    @include desktop-only{
-        flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    @include tablet-only {
+      width: 30px;
+      height: 30px;
+      font-size: $big-text;
     }
+  }
+  &__list-icon {
+    padding-right: 10px;
+    color: lighten($color: $text-color, $amount: 50%);
+    &--mod {
+      color: $clr-primary;
+    }
+  }
 }
-.restau-card{
-    @include card-settings;
-    z-index: 1;
-    &--new{
-        &::after{
-            content: "Nouveau";
-            @include center-content;
-            position: absolute;
-            font-size: 14px;
-            font-weight: 550;
-            top: 10px;
-            right: 10px;
-            color: darken($color: $clr-tertiary, $amount: 38%);
-            background-color: $clr-tertiary;
-            border-radius: 2px;
-            width: 70px;
-            height: 30px;
-            text-align: center;
-            @include tablet-only{
-            width: 140px;
-            height: 60px;
-            font-size: $big-text;
-            }
-        }
+/*section des menus*/
+.restau-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: $bg-color-a;
+  padding: 60px 20px;
+  @include desktop-only {
+    width: 100%;
+  }
+}
+/*cartes des menus*/
+.restau {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include desktop-only {
+    flex-flow: row wrap;
+  }
+}
+/*carte de menu*/
+.restau-card {
+  @include card-settings;
+  z-index: 1;
+  &--new {
+    &::after {
+      content: "Nouveau";
+      @include center-content;
+      position: absolute;
+      font-size: 14px;
+      font-weight: 550;
+      top: 10px;
+      right: 10px;
+      color: darken($color: $clr-tertiary, $amount: 38%);
+      background-color: $clr-tertiary;
+      border-radius: 2px;
+      width: 70px;
+      height: 30px;
+      text-align: center;
+      @include tablet-only {
+        width: 140px;
+        height: 60px;
+        font-size: $big-text;
+      }
     }
-    &__top{
-        height: 70%;
-        overflow: hidden;
+  }
+  &__top {
+    /*image (et icone "nouveau)"*/
+    height: 70%;
+    overflow: hidden;
+  }
+  &__bottom {
+    /*texte et bouton like*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30%;
+    padding: 15px;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 62%;
+  }
+  &__name {
+    font-weight: $primary-font-weight;
+  }
+  &__location {
+    font-weight: $tertiary-font-weight;
+  }
+  &__hearts {
+    /*icones like superposées*/
+    width: 40px;
+    height: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet-only {
+      width: 60px;
+      font-size: 60px;
     }
-    &__bottom{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 30%;
-        padding: 15px;
+    &:hover > .restau-card__hearts--full {
+      opacity: 1;
+      transform: scale(1.2);
     }
-    &__image{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: 0 62%;
+    &--empty {
+      position: absolute;
+      z-index: 1;
     }
-    &__name{
-        font-weight: $primary-font-weight;
+    &--full {
+      opacity: 0;
+      transform: scale(0);
+      z-index: 2;
+      position: absolute;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
+      transition: all 500ms ease-out;
     }
-    &__location{
-        font-weight: $tertiary-font-weight;
-    }   
-    &__hearts{
-        width: 40px;
-        height: 100%;
-        font-size: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include tablet-only{
-            width: 60px;
-            font-size: 60px;
-        }
-        &:hover > .restau-card__hearts--full{
-            opacity:1;
-            transform:scale(1.2);
-        }
-        &--empty{
-            position: absolute;
-            z-index: 1;
-        }
-        &--full{
-            opacity: 0;
-            transform: scale(0);
-            z-index: 2;
-            position: absolute;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(170deg, $clr-secondary, $clr-primary);
-            transition: all 500ms ease-out;
-        }
-    }
+  }
 }

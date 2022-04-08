@@ -1,5 +1,4 @@
 @import "./Utils/variables";
-@import "./Utils/functions";
 @import "./Utils/mixins";
 @import "./Base/base";
 @import "./Base/typography";
@@ -11,16 +10,16 @@
 @import "./Pages/Homepage";
 @import "./Pages/Menus";
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-a{
+a {
+  text-decoration: none;
+  color: inherit;
+  &:active {
     text-decoration: none;
-    color: inherit;
-    &:active{
-        text-decoration: none;
-    }
+  }
 }

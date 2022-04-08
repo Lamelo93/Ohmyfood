@@ -1,198 +1,207 @@
-.menu{
-    position: relative;
-    font-family: $secondary-font-family;
-    &__button{
-        align-self: center;
-        margin: 20px 0;
-    }
+//STYLE DES PAGES DE MENU
+
+/*contenu de la page menu*/
+.menu {
+  position: relative;
+  font-family: $secondary-font-family;
+  &__button {
+    align-self: center;
+    margin: 20px 0;
+  }
 }
-.menu-image{
-    position: relative;
-    overflow: hidden;
-    &__img{
+
+/*image de la page menu*/
+.menu-image {
+  position: relative;
+  overflow: hidden;
+  &__img {
     transition: 300ms ease-out;
     max-height: 250px;
     width: 100%;
     object-fit: cover;
     object-position: 0 62%;
-        @include tablet-only{
-            max-height: 600px;
-        }
+    @include tablet-only {
+      max-height: 600px;
     }
+  }
 }
 
-.menu-container{
-    border-radius: 35px 35px 0 0;
-    position: relative;
-    background-color: $bg-color-a;
-    z-index: 1;
+/*menu*/
+.menu-container {
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  background-color: $bg-color-a;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 15px;
+  margin-top: -45px;
+  @include desktop-only {
+    gap: 60px;
+  }
+  &__block {
+    /*entrees plats et desserts*/
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 40px 15px;
-    margin-top: -45px;
-    @include desktop-only{
-        gap: 60px;
+    gap: 15px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: appear $appear-dur both ease-out;
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        animation-delay: $appear-delay * $i;
+      }
     }
-    &__block{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        transform: translateY(20px);
-        opacity: 0;
-        animation: appear $appear-dur both ease-out;
-        @for $i from 1 through 3 {
-            &--#{$i} {
-                animation-delay: $appear-delay*$i;
-            }
-        }
-        @include desktop-only{
-            margin: 0 auto;
-            width: 50%;
-        }
+    @include desktop-only {
+      margin: 0 auto;
+      width: 50%;
     }
-    &__type{
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: $secondary-font-size;
-        @include tablet-only{
-            font-size: $primary-font-size;
-        }
+  }
+  &__type {
+    /*titre entrees plats desserts*/
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: $secondary-font-size;
+    @include tablet-only {
+      font-size: $primary-font-size;
     }
-    &--underlined{
-        padding-bottom: 2px;
-        display: inline-block;
-        border-bottom: 3px solid $clr-tertiary;
-    }
-    &__list{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    &__list-item{
-        width: 100%;
-        background-color: white;
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow:  5px 10px 30px -10px black;
-        overflow: hidden;
-        &:hover > .menu-container__checkbox{
-            width: 70px;
-            @include tablet-only{
-                width: 100px;
-            }
-        }
-        &:hover  .menu-container__icon{
-            animation: checkflip 300ms;
-        }
-        &:hover .menu-container__food-recipe{
-            width: 230px;
-            max-width: 230px;
-            @include smallscreen{
-                max-width:90px;
-            }
-        }
-        &:hover .menu-container__food-name{
-            max-width: 230px;
-            @include smallscreen{
-                max-width:90px;
-            }
-        }
-    }
-    &__food{
-        width: 100%;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-    &__food-info{
-        min-width: 0;
-        flex-shrink: 1;
-        
-    }
-    &__food-name{
-        font-size: 18px;
-        line-height: 30px;
-        min-width: 0;
-        max-width: 280px;
-        direction:ltr;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        transition: 300ms ease-out;
-        @include tablet-only{
-            font-size: $big-text;
-            max-width: 100%;
-            width: 100%;
-            min-width:fit-content;
-        }
-        @include smallscreen{
-            max-width:168px;
-        }
-    }
-    &__food-recipe{
-        min-width:0;
-        max-width: 280px;
-        width: 280px;
-        font-size:15px;
-        font-weight: 300;
-        direction:ltr;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        transition: 300ms ease-out;
-        @include tablet-only{
-            font-size: $big-text;
-            max-width: 100%;
-            width: 100%;
-            min-width:fit-content;
-        }
-        @include smallscreen{
-            max-width:168px;
-        }
-    }
-    &__food-price{
-        align-self:flex-end;
-        display:flex;
-        display:inline-block;
-        font-size: 15px;
-        font-weight: bold;
-        @include tablet-only{
-            font-size: $big-text;
-        }
-    }
-    &__checkbox{
-        color: white;
-        font-size: 20px;
-        border-radius:0px 15px 15px 0px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        background:#99E2D0;
-        overflow:hidden;
-        width: 0px;
-        height:70px;
-        transition: ease 500ms;
-        @include tablet-only{
-            height: 100px;
-            font-size: 30px;
-        }
-    }
-}
-
-.menu-heading{
+  }
+  &--underlined {
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 3px solid $clr-tertiary;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  &__list-item {
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 10px;
-    &__title{
-        @include typography($font-size:27px);
-        @include tablet-only{
-            @include typography($font-size:40px);
-        }
-    }    
+    box-shadow: 5px 10px 30px -10px black;
+    overflow: hidden;
+    &:hover > .menu-container__checkbox {
+      width: 70px;
+      @include tablet-only {
+        width: 100px;
+      }
+    }
+    &:hover .menu-container__icon {
+      animation: checkflip 300ms;
+    }
+    &:hover .menu-container__food-recipe {
+      width: 230px;
+      max-width: 230px;
+      @include smallscreen {
+        max-width: 90px;
+      }
+    }
+    &:hover .menu-container__food-name {
+      max-width: 230px;
+      @include smallscreen {
+        max-width: 90px;
+      }
+    }
+  }
+  &__food {
+    /*nom, recette et prix*/
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__food-info {
+    /*nom et recette*/
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  &__food-name {
+    font-size: 18px;
+    line-height: 30px;
+    min-width: 0;
+    max-width: 280px;
+    direction: ltr;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 300ms ease-out;
+    @include tablet-only {
+      font-size: $big-text;
+      max-width: 100%;
+      width: 100%;
+      min-width: fit-content;
+    }
+    @include smallscreen {
+      max-width: 168px;
+    }
+  }
+  &__food-recipe {
+    min-width: 0;
+    max-width: 280px;
+    width: 280px;
+    font-size: 15px;
+    font-weight: 300;
+    direction: ltr;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 300ms ease-out;
+    @include tablet-only {
+      font-size: $big-text;
+      max-width: 100%;
+      width: 100%;
+      min-width: fit-content;
+    }
+    @include smallscreen {
+      max-width: 168px;
+    }
+  }
+  &__food-price {
+    align-self: flex-end;
+    display: flex;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    @include tablet-only {
+      font-size: $big-text;
+    }
+  }
+  &__checkbox {
+    color: white;
+    font-size: 20px;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #99e2d0;
+    overflow: hidden;
+    width: 0px;
+    height: 70px;
+    transition: ease 500ms;
+    @include tablet-only {
+      height: 100px;
+      font-size: 30px;
+    }
+  }
+}
+/*nom du restaurant et bouton like*/
+.menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  &__title {
+    @include typography($font-size: 27px);
+    @include tablet-only {
+      @include typography($font-size: 40px);
+    }
+  }
 }

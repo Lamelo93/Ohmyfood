@@ -1,48 +1,49 @@
-.footer{
-    background-color: rgb(53, 53, 53);
-    color: white;
-    padding: 20px;
-    font-size: 15px;
-    font-family: $secondary-font-family;
-    @include tablet-only{
-        font-size: $big-text;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+//FOOTER STYLE
+.footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+  font-family: $secondary-font-family;
+  @include tablet-only {
+    font-size: $big-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include desktop-only {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  &__list {
+    @include tablet-only {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    @include desktop-only{
-        min-height: 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+    @include desktop-only {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
     }
-    &__list{
-        @include tablet-only{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-        @include desktop-only{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-        }
+  }
+  &__logo {
+    font-size: $secondary-font-size;
+    padding-bottom: 20px;
+    @include tablet-only {
+      font-size: $big-text;
     }
-    &__logo{
-        font-size: $secondary-font-size;
-        padding-bottom: 20px;
-        @include tablet-only{
-            font-size: $big-text;
-        }
+  }
+  &__list-item {
+    padding-bottom: 10px;
+  }
+  &__icon {
+    width: 20px;
+    @include tablet-only {
+      width: 40px;
     }
-    &__list-item{
-        padding-bottom: 10px;
-    }
-    &__icon{
-        width: 20px;
-        @include tablet-only{
-            width: 40px;
-        }
-    }
+  }
 }
